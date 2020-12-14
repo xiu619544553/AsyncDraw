@@ -88,10 +88,10 @@
         return;
     }
     
-    UIColor *backgroundColor = _backgroundColor;
-    NSString *text = _text;
-    UIFont *font = _font;
-    UIColor *textColor = _textColor;
+    UIColor *backgroundColor = _backgroundColor ?: UIColor.clearColor;
+    NSString *text = _text ?: @"";
+    UIFont *font = _font ?: [UIFont systemFontOfSize:17.f];
+    UIColor *textColor = _textColor ?: UIColor.blackColor;
     CGSize size = layer.bounds.size;
     
     CGContextSetTextMatrix(ctx, CGAffineTransformIdentity);
